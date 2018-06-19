@@ -1,8 +1,13 @@
 class LandmarksController < ApplicationController
 
-  get '/landmarks' do
-    @landmarks = Landmark.all
-    erb :'/landmarks/index'
-  end
+  get '/' do
+     redirect '/landmarks'
+   end
 
-end
+   get '/landmarks' do
+     @landmarks = Landmark.all
+     @figures = Figure.all
+     erb :'landmarks/index'
+   end
+
+ end
