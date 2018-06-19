@@ -4,4 +4,5 @@ class FiguresController < ApplicationController
     @figures = Figure.all
     erb :'figures/index'
   end
+  
 end
